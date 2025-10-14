@@ -28,11 +28,22 @@ fun imprimeNombre() {
 var arrayEnteros = arrayOf(1, 2, 3, 4, 5)
 
 var arrayEnterosElectricBoogaloo = Array(5) { it + 1 }
+/*
+ it es una palabra clave que referencia al parámetro implícito de una expresión lambda,
+ en este caso se trata del índice del elemento del array, y la función establece el valor de cada elemento.
+ */
 
 fun imprimeArrayDouble() {
     for (numeros in arrayEnterosElectricBoogaloo) {
         print("${numeros.toDouble()} ")
     }
+}
+
+fun imprimeArrayDoublePruebas() {
+    print("Array entero: ")
+    arrayEnterosElectricBoogaloo.forEach { print("$it ") }
+    print("\nArray decimal: ")
+    arrayEnterosElectricBoogaloo.forEach { print("${it.toDouble()} ") }
 }
 
 // Ej 5
@@ -81,4 +92,10 @@ fun imprimeCalificacion() {
         in 9..10 -> println("Sobresaliente")
         else -> println("Nota no válida")
     }
+}
+
+// Ej 9
+fun imprimeListaNombresMayusculas() {
+    val listaNombres = listOf<String>("Iris", "Patri", "Ale", "Gero")
+    listaNombres.forEach { println(it.uppercase()) }
 }
