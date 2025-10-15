@@ -47,10 +47,10 @@ fun imprimeArrayDoublePruebas() {
 }
 
 // Ej 5
-var cadena: String? = "Kotlin"
+var cadena: String? = "23"
 fun mensajeRaro() {
-    cadena as? Int
-    if (cadena is Int) println(cadena)
+    val cadenaInt = cadena as? Int
+    if (cadenaInt is Int) println(cadenaInt)
     else println("No se puede imprimir")
 }
 
@@ -98,4 +98,22 @@ fun imprimeCalificacion() {
 fun imprimeListaNombresMayusculas() {
     val listaNombres = listOf<String>("Iris", "Patri", "Ale", "Gero")
     listaNombres.forEach { println(it.uppercase()) }
+}
+
+// Ej 10
+fun manejoExcepciones() {
+    val a: Int = 10
+    val b: Int = 0
+
+    try {
+        val c = a / b
+        println("$a / $b = $c")
+    } catch (e: ArithmeticException) {
+        throw IllegalStateException("Imposible dividir $a entre $b", e)
+    }
+}
+
+// Ej 11
+fun saludar(nombre: String): String {
+    return "Hola, $nombre!"
 }
