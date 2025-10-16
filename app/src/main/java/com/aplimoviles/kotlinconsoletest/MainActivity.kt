@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = saludar(nombre),
+        text = "La suma de los números es ${sumar(1, 2, 3, 4)}",
         modifier = modifier
     )
 }
@@ -44,4 +44,8 @@ fun GreetingPreview() {
     KotlinConsoleTestTheme {
         Greeting("Android")
     }
+}
+
+fun despedirse(): String{
+    return "Hasta luego"
 }

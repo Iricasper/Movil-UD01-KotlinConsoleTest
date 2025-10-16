@@ -117,3 +117,29 @@ fun manejoExcepciones() {
 fun saludar(nombre: String): String {
     return "Hola, $nombre!"
 }
+
+// Ej 12
+fun mostrarPerfil(nombre: String, edad: Int = 18, ciudad: String = "Desconocida"): String {
+    return "Hola, $nombre, tienes $edad años y vives en $ciudad"
+}
+
+// Ej 13
+fun sumar(vararg numeros: Int): Int {
+    val suma = numeros.sum()
+    return suma
+}
+
+// Ej 14 (Continúa en la clase Persona y en el main)
+fun saludoGlobal() {
+    val p = Persona()
+    println(p.saludar("Iris"))
+    println(despedirse())
+}
+
+// Ej 15
+fun String.primeraLetraMayuscula(): String {
+//    return get(0).uppercaseChar().toString()+slice(1..length-1)
+    return replaceFirstChar { it.uppercase() }
+}
+
+// Ej 16 (en la clase Numero)
