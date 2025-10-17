@@ -33,7 +33,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "La suma de los números es ${sumar(1, 2, 3, 4)}",
+//        text = "La suma de los números es ${sumar(1, 2, 3, 4)}",
+        text = mostrarPerfil("Iris", 24, "Mairena"),
         modifier = modifier
     )
 }
